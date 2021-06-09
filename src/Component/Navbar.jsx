@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from "../images/abc.gif";
+import { Link } from "react-router-dom";
 export default class Navbar extends Component {
   render() {
     return (
@@ -14,10 +15,18 @@ export default class Navbar extends Component {
             </div>
           </div>
           <ul>
-            <li>New</li>
-            <li>Best </li>
-            <li>Top</li>
-            <li>Comments</li>
+            <Link to="/">
+              <li>New</li>
+            </Link>
+            <Link to="/best">
+              <li>Best </li>
+            </Link>
+            <Link to="/top">
+              <li>Top</li>
+            </Link>
+            <Link to="/com">
+              <li>Comments</li>
+            </Link>
           </ul>
         </nav>
       </div>

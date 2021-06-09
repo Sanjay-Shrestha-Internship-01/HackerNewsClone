@@ -17,7 +17,6 @@ export default class Newnews extends Component {
     axios
       .get(`${baseUrl}/newstories.json`)
       .then((result) => {
-        console.log(result.data);
         this.results = result.data.slice(0, 30);
         this.results.forEach((element) => {
           promises.push(

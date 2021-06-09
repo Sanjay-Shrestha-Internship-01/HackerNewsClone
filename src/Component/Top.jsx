@@ -16,7 +16,6 @@ export default class Top extends Component {
     axios
       .get(`${baseUrl}/topstories.json`)
       .then((result) => {
-        console.log(result.data);
         this.results = result.data.slice(0, 30);
         this.results.forEach((element) => {
           promises.push(

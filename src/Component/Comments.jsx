@@ -10,7 +10,6 @@ export default class Comments extends Component {
 
   state = {
     comments: [],
-    getStoryItem: [],
   };
 
   componentDidMount() {
@@ -19,15 +18,12 @@ export default class Comments extends Component {
     axios
       .get(`${baseUrl}/maxitem.json`)
       .then((res) => {
-        console.log(res.data);
-
         for (let i = 0; i < 30; i++) {
           axios.get(`${baseUrl}/item/${res.data - i}.json`).then((put) => {
             comments.push(put.data);
             this.setState({ comments: comments });
           });
         }
-        console.log(comments);
       })
       .catch((e) => {
         console.log("error detected");
