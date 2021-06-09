@@ -51,6 +51,7 @@ export default class Top extends Component {
             <p> {topStories.score} points</p>
             <p> by {topStories.by}</p>
             <p> time {topStories.time}</p>
+            <p>comments {topStories.kids && topStories.kids.length > 0? topStories.kids.length:0} </p>
           </div>
         ))}
       </div>

@@ -4,6 +4,7 @@ import Navbar  from "./Component/Navbar";
 import Newnews  from "./Component/Newnews";
 import Best  from "./Component/Best";
 import Top  from "./Component/Top";
+import Comments  from "./Component/Comments";
 import { BrowserRouter as Router, Switch , Route} from 'react-router-dom';
 
 
@@ -20,7 +21,7 @@ render () {
         <Route path="/newnews" component={Newnews} />
         <Route path="/best" component={Best} />
         <Route path="/top" component={Top} />
-        
+        <Route path="/com" component={Comments} />
         
       
     </div>

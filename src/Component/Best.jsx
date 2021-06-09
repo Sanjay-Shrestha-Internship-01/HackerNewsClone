@@ -42,15 +42,16 @@ export default class Best extends Component {
   render() {
     return (
       <div>
-        {this.state.getBestItem.map((best) => (
+        {this.state.getBestItem.map((bestStories) => (
           <div>
-            <a href={best.url}>
+            <a href={bestStories.url}>
               {" "}
-              <h2>{best.title}</h2>
+              <h2>{bestStories.title}</h2>
             </a>
-            <p>Score {best.score}</p>
-            <p> by {best.by}</p>
-            <p> time {best.time}</p>
+            <p> {bestStories.score} points</p>
+            <p> by {bestStories.by}</p>
+            <p> time {bestStories.time}</p>
+            <p>comments {bestStories.kids && bestStories.kids.length > 0? bestStories.kids.length:0} </p>
           </div>
         ))}
       </div>

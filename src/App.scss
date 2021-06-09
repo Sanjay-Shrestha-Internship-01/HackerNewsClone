@@ -13,6 +13,10 @@
   .nav-head {
     display: flex;
     flex-flow: row wrap;
+    .nav-logo{
+      width: 18px;
+      height: 18px;
+    }
   }
   ul {
     list-style-type: none;

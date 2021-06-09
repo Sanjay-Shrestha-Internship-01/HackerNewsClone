@@ -52,6 +52,7 @@ export default class Newnews extends Component {
             <p> {stories.score} points</p>
             <p> by {stories.by}</p>
             <p> time {stories.time}</p>
+            <p>comments {stories.kids && stories.kids.length > 0? stories.kids.length:0} </p>
           </div>
         ))}
       </div>
