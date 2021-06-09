@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import moment from "moment";
 import CONSTANTS from "../Services/Hnapi";
 const { baseUrl } = CONSTANTS;
 export default class Newnews extends Component {
@@ -51,12 +52,16 @@ export default class Newnews extends Component {
             </a>
             <p> {stories.score} points</p>
             <p> by {stories.by}</p>
-            <p> time {stories.time}</p>
-            <p>comments {stories.kids && stories.kids.length > 0? stories.kids.length:0} </p>
+            <p> time {moment.unix(stories.time).fromNow()}</p>
+            <p>
+              comments{" "}
+              {stories.kids && stories.kids.length > 0
+                ? stories.kids.length
+                : 0}{" "}
+            </p>
           </div>
         ))}
       </div>
     );
   }
 }
-
