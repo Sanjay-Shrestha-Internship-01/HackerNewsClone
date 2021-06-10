@@ -1,0 +1,32 @@
+.App {
+  background-color: #f6f6ef;
+  width: 60%;
+  position: relative;
+  left: 20%;
+}
+.navbar {
+  background-color: #ff6600;
+  display: flex;
+  flex-flow: row wrap;
+
+  .nav-head {
+    display: flex;
+    flex-flow: row wrap;
+    .nav-logo {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    li {
+      padding: 0px 20px;
+    }
+  }
+}
+
+.app-body {
+  padding-left: 20px;
+}
